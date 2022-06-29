@@ -328,58 +328,47 @@ ul {
   margin-bottom: 12px;
 }
 
-.name-box {
-  text-align: left;
-  width: 448px;
-  position: relative;
-}
-.name-icon {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 34px;
-  left: 15px;
-  fill: #212121;
-}
-.form-input:hover + .name-icon,
-.form-input:focus + .name-icon {
-  fill: var(--accent-text-color);
-}
-.tel-box {
-  text-align: left;
-  width: 448px;
-  position: relative;
-}
-.tel-icon {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 34px;
-  left: 15px;
-  fill: #212121;
-}
-.form-input:hover ~ .tel-icon,
-.form-input:focus ~ .tel-icon {
-  fill: var(--accent-text-color);
-}
+.name-box,
+.tel-box,
 .mail-box {
-  display: block;
   text-align: left;
   width: 448px;
+}
+.input-name-icon,
+.input-tel-icon,
+.input-mail-icon {
   position: relative;
 }
+
+.name-icon,
+.tel-icon,
 .mail-icon {
   position: absolute;
   width: 18px;
   height: 18px;
-  top: 34px;
-  left: 15px;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
   fill: #212121;
 }
+.form-input:hover + .name-icon,
+.form-input:focus + .name-icon,
+.form-input:hover ~ .tel-icon,
+.form-input:focus ~ .tel-icon,
 .form-input:hover ~ .mail-icon,
 .form-input:focus ~ .mail-icon {
   fill: var(--accent-text-color);
 }
+
+/* .form-input:hover ~ .tel-icon,
+.form-input:focus ~ .tel-icon {
+  fill: var(--accent-text-color);
+}
+
+.form-input:hover ~ .mail-icon,
+.form-input:focus ~ .mail-icon {
+  fill: var(--accent-text-color);
+} */
 
 .label-title,
 .modal-comment {
@@ -532,6 +521,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
   height: 50px;
+  width: 200px;
 }
 .submit-btn.hover:hover,
 .submit-btn.hover:focus {
@@ -812,6 +802,7 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
+  width: 231px;
 }
 
 .accent-footer {
@@ -846,6 +837,12 @@ footer {
 
 .geo {
   color: var(--primary-bg-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
 }
 
 .geo:hover,
@@ -875,7 +872,14 @@ footer {
 .address-item:last-child {
   margin-bottom: 0;
 }
+.footer-contacts {
+  width: 231px;
+  margin-right: 70px;
+}
 /* footer conection section */
+.social {
+  width: 206px;
+}
 .footer-conection {
   font-weight: 700;
   font-size: 14px;
@@ -901,7 +905,6 @@ footer {
   justify-content: center;
   width: 206px;
   padding-top: 20px;
-  margin: 0;
   gap: 10px;
 }
 
